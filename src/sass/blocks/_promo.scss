@@ -16,6 +16,7 @@
         font-size: 42px;
         line-height: 42px;
         text-transform: uppercase;
+        margin-bottom: 0;
     }
 
     &__sabheader {
@@ -24,16 +25,17 @@
         font-size: 24px;
         line-height: 24px;
         text-transform: uppercase;
+        margin-bottom: 0;
     }
 
-    &__inons {
+    &__icons {
         margin-top: 60px;
         width: 424px;
         display: flex;
         justify-content: space-between;
     }
 
-    &__inon {
+    &__icon {
         width: 136px;
         text-align: center;
         font-weight: 500;
