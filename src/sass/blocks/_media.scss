@@ -32,6 +32,10 @@
             justify-content: space-around;
         }
     }
+
+    .consultation{
+        padding: 100px 15px 108px 15px;
+    }
 }
 
 @media (max-width: 767px) {}
@@ -91,5 +95,23 @@
         &__title {
             font-size: 18px;
         }
+    }
+
+    .consultation {
+        min-height: auto;
+        padding: 40px 15px;
+        text-align: center;
+        &__title {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .feed-form {
+        width: 100%;
     }
 }
