@@ -8,7 +8,7 @@
     }
 }
 
-.slick-prev, .slick-next{
+.prev, .next{
     position: absolute;
     left: -66px;
     top: 50%;
@@ -21,8 +21,15 @@
     }
 }
 
-.slick-next {
+.next {
     right: -66px;
     transform: translateX(50%);
     left: auto;
 } 
+
+.tns-item {
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
