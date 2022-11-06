@@ -53,15 +53,23 @@
     }
 
     &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -10px;
         margin-top: 60px;
     }
 
     &-item {
         width: 300px;
+        overflow: hidden;
         min-height: 440px;
         border: 2px solid #E8E8E8;
         padding: 20px;
         text-align: center;
+        margin: 0 10px;
+        margin-bottom: 20px;
 
         &__img {
             display: block;
@@ -90,6 +98,8 @@
             font-size: 14px;
             line-height: 14px;
             color: $main-color;
+            text-decoration: underline;
+            text-transform: uppercase;
 
             &:hover {
                 color: $main-color;
@@ -119,6 +129,74 @@
             font-weight: 700;
             font-size: 20px;
             line-height: 20px;
+        }
+
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            padding-right: 20px;
+            padding-left: 15px;
+            margin-bottom: 0;
+            list-style-type: none;
+            transform: translateX(0%);
+            transition: 0.5s all;
+
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+
+            li {
+                position: relative;
+                text-align: start;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #555555;
+                margin-bottom: 5px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -15px;
+                    top: 7px;
+                }
+            }
+        }
+
+        &__back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 15px));
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            color: $main-color;
+            text-decoration: underline;
+            text-transform: uppercase;
         }
     }
 }
