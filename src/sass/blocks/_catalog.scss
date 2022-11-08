@@ -53,12 +53,14 @@
     }
 
     &__content {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin: 0 -10px;
         margin-top: 60px;
+        &_active {
+            display: flex;
+        }
     }
 
     &-item {
@@ -68,7 +70,7 @@
         border: 2px solid #E8E8E8;
         padding: 20px;
         text-align: center;
-        margin: 0 10px;
+        margin: 0 8px;
         margin-bottom: 20px;
 
         &__img {
