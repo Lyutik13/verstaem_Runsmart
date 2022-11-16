@@ -49,8 +49,7 @@ $(document).ready(function () {
   toggleSlide(".catalog-item__link");
   toggleSlide(".catalog-item__back");
 
-  // Modal
-
+  //========== Modal ==========
   $("[data-modal=consultation]").on("click", function () {
     $(".overlay, #consultation").fadeIn("slow");
   });
@@ -68,8 +67,7 @@ $(document).ready(function () {
     });
   });
 
-// Validate
-
+//========== Validate ==========
   function validateForms(form) {
     $(form).validate({
       rules: {
@@ -94,4 +92,7 @@ $(document).ready(function () {
   validateForms("#consultation-form");
   validateForms("#consultation form");
   validateForms("#order form");
+  
+  //========== jQuery-Mask-Plugin ==========
+  $('input[name=phone]').mask("+7 (999) 999-99-99");
 });
