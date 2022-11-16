@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
   });
 
-//========== Validate ==========
+  //========== Validate ==========
   function validateForms(form) {
     $(form).validate({
       rules: {
@@ -92,7 +92,7 @@ $(document).ready(function () {
   validateForms("#consultation-form");
   validateForms("#consultation form");
   validateForms("#order form");
-  
+
   //========== jQuery-Mask-Plugin ==========
-  $('input[name=phone]').mask("+7 (999) 999-99-99");
+  $("input[name=phone]").mask("+7 (999) 999-99-99");
 });
