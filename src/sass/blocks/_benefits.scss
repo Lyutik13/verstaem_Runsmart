@@ -30,12 +30,19 @@
         width: 270px;
         text-align: center;
         padding: 15px;
+    }
 
-        img {
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 30px;
-            width: 70px;
+    &__img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 70px;
+
+        &_animated {
+            animation-name: heartbeat;
+            animation-duration: 2.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
         }
     }
 
@@ -50,6 +57,7 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 18px;
+
         a {
             color: $main-color;
         }
