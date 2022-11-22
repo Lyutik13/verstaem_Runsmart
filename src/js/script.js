@@ -112,4 +112,7 @@ $(document).ready(function () {
     });
     return false;
   });
+
+  //========== wow.js for animate.css ==========
+  new WOW().init();
 });
