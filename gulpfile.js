@@ -4,7 +4,7 @@ const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
-const sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("server", function () {
   browserSync({
@@ -22,7 +22,12 @@ gulp.task("styles", function () {
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(rename({ suffix: ".min", prefix: "" }))
-    .pipe(autoprefixer())
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 2 versions"],
+        cascade: false,
+      })
+    )
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("src/css"))
